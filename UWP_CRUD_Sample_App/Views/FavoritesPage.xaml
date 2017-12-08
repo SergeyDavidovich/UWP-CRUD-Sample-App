@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="CollectionsWorkUWPTemplate10.Views.FavoritesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Behaviors="using:Template10.Behaviors"
+    xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:controls="using:Template10.Controls"
+    xmlns:model="using:CollectionsWorkUWPTemplate10.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uwpkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d">
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <controls:PageHeader x:Name="pageHeader" x:Uid="ShellMenuFavorites" Text="Favorites page"
+                             RelativePanel.AlignLeftWithPanel="True"
+                             RelativePanel.AlignRightWithPanel="True"
+                             RelativePanel.AlignTopWithPanel="True">
+            <!--  secondary commands  --><!--
+            <controls:PageHeader.SecondaryCommands>
+                <AppBarButton x:Uid="PageHeaderSecondaryButtonSettings" Label="" />
+                <AppBarButton x:Uid="PageHeaderSecondaryButtonPrivacy" Label="" />
+                <AppBarButton x:Uid="PageHeaderSecondaryButtonAbout" Label="" />
+            </controls:PageHeader.SecondaryCommands>-->
+        </controls:PageHeader>
+        <uwpkit:AdaptiveGridView x:Name="grid"
+            Margin="10" 
+            DesiredWidth="320"
+            OneRowModeEnabled="False"
+            RelativePanel.Below="pageHeader" 
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True"
+            ItemsSource="{x:Bind ViewModel.Persons}" CanDrag="True"
+            SelectedItem="{x:Bind ViewModel.SelectedPerson,Mode=TwoWay}"
+            Tapped="{x:Bind ViewModel.ShowDialog}" CanDragItems="True" CanReorderItems="True"                     
+             >
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock>
+                            <Run Text="{Binding Name}"/>
+                            <Run Text="{Binding LastName}"/>
+                        </TextBlock>
+                            <uwpkit:RoundImageEx Source="{Binding PathToImage}" 
+                                        Height="260" Width="260"
+                                        Stretch="UniformToFill"     
+                                        IsCacheEnabled="True"
+                                        CornerRadius="4" 
+                                        BorderThickness="1" BorderBrush="Orange" 
+                                        HorizontalContentAlignment="Stretch" 
+                                        VerticalContentAlignment="Stretch" HorizontalAlignment="Center" 
+                                                 VerticalAlignment="Center" Margin="0,10,0,0" />
+                            <uwpkit:HeaderedTextBlock Text="{Binding Email}"
+                                        Header="Email"
+                                        FontSize="20"
+                                        Orientation="Vertical"
+                                        Margin="0,10,0,0" />
+                        </StackPanel>
+                 </DataTemplate>
+            </GridView.ItemTemplate>
+        </uwpkit:AdaptiveGridView>
+    </RelativePanel>
+</Page>
+

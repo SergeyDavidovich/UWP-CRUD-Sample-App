@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="CollectionsWorkUWPTemplate10.Views.ValidatePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CollectionsWorkUWPTemplate10.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:CollectionsWorkUWPTemplate10.ViewModels"
+    xmlns:validate="using:Template10.Controls.Validation"
+    xmlns:behaviors="using:Template10.Validation.Behaviors"
+
+    mc:Ignorable="d">
+    <Page.Resources>
+        <x:Double x:Key="FieldWidth">500</x:Double>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          DataContext="{Binding CurPerson}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <validate:ControlWrapper PropertyName="Name" Grid.Row="1" Margin="20">
+            <TextBox Width="{StaticResource FieldWidth}" Header="Name"
+            Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </validate:ControlWrapper>
+        <validate:ControlWrapper PropertyName="LastName" Grid.Row="2" Margin="20">
+            <TextBox Width="{StaticResource FieldWidth}" Header="Last name"
+            Text="{Binding LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </validate:ControlWrapper>
+
+        <Button Content="Save" IsEnabled="{Binding IsValid}" Grid.Row="3"/>
+
+    </Grid>
+</Page>
