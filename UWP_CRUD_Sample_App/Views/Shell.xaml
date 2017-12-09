@@ -31,17 +31,17 @@
                                Margin="6, 0, 0, 0" VerticalAlignment="Center" />
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
-            <Controls:HamburgerButtonInfo PageType="views:RecentlyViewedPage">
+            <!--<Controls:HamburgerButtonInfo PageType="views:RecentlyViewedPage">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <SymbolIcon Symbol="Filter" Width="48" Height="48" />
                     <TextBlock x:Uid="ShellMenuRecentlyViewed" Text="" 
                                Margin="6, 0, 0, 0" VerticalAlignment="Center" />
                 </StackPanel>
-            </Controls:HamburgerButtonInfo>
+            </Controls:HamburgerButtonInfo>-->
         </Controls:HamburgerMenu.PrimaryButtons>
         <Controls:HamburgerMenu.SecondaryButtons>
             <!--  profile button  -->
-            <Controls:HamburgerButtonInfo ButtonType="Command">
+            <!--<Controls:HamburgerButtonInfo ButtonType="Command">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="Tapped">
                         <behaviors:MessageDialogAction Title="Show profile"
@@ -62,7 +62,7 @@
                                VerticalAlignment="Center"
                                Text="" />
                 </StackPanel>
-            </Controls:HamburgerButtonInfo>
+            </Controls:HamburgerButtonInfo>-->
             <!--  settingspage button  -->
             <Controls:HamburgerButtonInfo x:Name="SettingsButton"
                                           PageParameter="0"
