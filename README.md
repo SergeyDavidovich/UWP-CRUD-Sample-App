@@ -3,9 +3,9 @@
 ### 1. Bootstrap
 ### 2. Navigation service
 ### 3. Model, Repository, ViewModel
-### 4. Delete операция
-### 5. Add операция
-### 6. Edit операция
-### 7. Favorites views
-### 8. Validation
-### 9. Options
+### 4. Delete operation
+### 5. Add operation
+### 6. Edit operation
+### 7. Favorites managing
+### 8. Input validation 
+### 9. Application Options
