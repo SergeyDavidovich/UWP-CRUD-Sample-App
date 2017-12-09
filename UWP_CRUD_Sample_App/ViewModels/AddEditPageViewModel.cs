@@ -73,7 +73,7 @@ namespace CollectionsWorkUWPTemplate10.ViewModels
             if (parameter == null)
             {
                 currentState = States.Add;
-                Title = "Addiing new person";
+                Title = "Adding new person";
             }
             else if (parameter != null)
             {
