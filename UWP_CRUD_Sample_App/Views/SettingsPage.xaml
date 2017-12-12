@@ -217,7 +217,10 @@
                         <Run>Version</Run>
                         <Run Text="{Binding Version}" />
                     </TextBlock>
-
+                    <HyperlinkButton x:Name="Hyperlink"
+                                     RelativePanel.Below="VersionTextBlock"
+                        Content="Source code on Github" 
+                                     NavigateUri="https://sergeydavidovich.github.io/UWP-CRUD-Sample-App/"/>
                 </RelativePanel>
             </PivotItem>
         </Pivot>
