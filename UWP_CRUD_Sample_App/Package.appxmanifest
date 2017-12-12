@@ -3,7 +3,7 @@
   <Identity Name="92211ab1-5481-4a1a-9111-a3dd87b81b72" Publisher="CN=daren" Version="1.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="92211ab1-5481-4a1a-9111-a3dd87b81b72" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>CollectioncWorkUWPTemplate10</DisplayName>
+    <DisplayName>UWP CRUD Sample App</DisplayName>
     <PublisherDisplayName>Sergiusz Kriwobokow</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
